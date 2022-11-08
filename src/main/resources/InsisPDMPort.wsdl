@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Oracle JAX-WS 2.1.5. -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ibase="http://fadata.eu/soap/insis" xmlns:tns="http://fadata.eu/soap/insis/pdm" xmlns:insis="http://www.fadata.bg/Insurance_Messages/v3.0/xml/" xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200512" name="InsisPDM" targetNamespace="http://fadata.eu/soap/insis/pdm">
+    <import location="http://10.1.4.201:9179/insisws/InsisPDMPort?wsdl=1" namespace="http://fadata.eu/soap/insis"/>
+    <import location="http://10.1.4.201:9179/insisws/InsisPDMPort?wsdl=1" namespace="http://fadata.eu/soap/insis"/>
+    <types>
+        <xs:schema targetNamespace="http://www.fadata.bg/Insurance_Messages/v3.0/xml/" elementFormDefault="qualified">
+            <xs:include schemaLocation="http://10.1.4.201:9179/insisws/InsisPDMPort?xsd=2"/>
+        </xs:schema>
+    </types>
+    <message name="ChangeAgentInfoRqMessage">
+        <part name="payload" element="insis:ChangeAgentInfoRq"/>
+    </message>
+    <message name="ChangeAgentInfoRsMessage">
+        <part name="payload" element="insis:ChangeAgentInfoRs"/>
+    </message>
+    <message name="ChangeBankInfoRqMessage">
+        <part name="payload" element="insis:ChangeBankInfoRq"/>
+    </message>
+    <message name="ChangeBankInfoRsMessage">
+        <part name="payload" element="insis:ChangeBankInfoRs"/>
+    </message>
+    <message name="ChangeCreditorInfoRqMessage">
+        <part name="payload" element="insis:ChangeCreditorInfoRq"/>
+    </message>
+    <message name="ChangeCreditorInfoRsMessage">
+        <part name="payload" element="insis:ChangeCreditorInfoRs"/>
+    </message>
+    <message name="ChangeClientInfoRqMessage">
+        <part name="payload" element="insis:ChangeClientInfoRq"/>
+    </message>
+    <message name="ChangeClientInfoRsMessage">
+        <part name="payload" element="insis:ChangeClientInfoRs"/>
+    </message>
+    <message name="ChangeExpertInfoRqMessage">
+        <part name="payload" element="insis:ChangeExpertInfoRq"/>
+    </message>
+    <message name="ChangeExpertInfoRsMessage">
+        <part name="payload" element="insis:ChangeExpertInfoRs"/>
+    </message>
+    <message name="ChangeInsurerInfoRqMessage">
+        <part name="payload" element="insis:ChangeInsurerInfoRq"/>
+    </message>
+    <message name="ChangeInsurerInfoRsMessage">
+        <part name="payload" element="insis:ChangeInsurerInfoRs"/>
+    </message>
+    <message name="ChangePersonInfoRqMessage">
+        <part name="payload" element="insis:ChangePersonInfoRq"/>
+    </message>
+    <message name="ChangePersonInfoRsMessage">
+        <part name="payload" element="insis:ChangePersonInfoRs"/>
+    </message>
+    <message name="ChangeStaffInfoRqMessage">
+        <part name="payload" element="insis:ChangeStaffInfoRq"/>
+    </message>
+    <message name="ChangeStaffInfoRsMessage">
+        <part name="payload" element="insis:ChangeStaffInfoRs"/>
+    </message>
+    <message name="ChangeOfficeInfoRqMessage">
+        <part name="payload" element="insis:ChangeOfficeInfoRq"/>
+    </message>
+    <message name="ChangeOfficeInfoRsMessage">
+        <part name="payload" element="insis:ChangeOfficeInfoRs"/>
+    </message>
+    <message name="ChangeOthersInfoRqMessage">
+        <part name="payload" element="insis:ChangeOthersInfoRq"/>
+    </message>
+    <message name="ChangeOthersInfoRsMessage">
+        <part name="payload" element="insis:ChangeOthersInfoRs"/>
+    </message>
+    <message name="FindPersonByPIDRqMessage">
+        <part name="payload" element="insis:FindPersonByPIDRq"/>
+    </message>
+    <message name="FindPersonByPIDRsMessage">
+        <part name="payload" element="insis:FindPersonByPIDRs"/>
+    </message>
+    <message name="GetPeopleDocumentsRqMessage">
+        <part name="payload" element="insis:GetPeopleDocumentsRq"/>
+    </message>
+    <message name="GetPeopleDocumentsRsMessage">
+        <part name="payload" element="insis:GetPeopleDocumentsRs"/>
+    </message>
+    <message name="RegisterAgentRqMessage">
+        <part name="payload" element="insis:RegisterAgentRq"/>
+    </message>
+    <message name="RegisterAgentRsMessage">
+        <part name="payload" element="insis:RegisterAgentRs"/>
+    </message>
+    <message name="RegisterCreditorRqMessage">
+        <part name="payload" element="insis:RegisterCreditorRq"/>
+    </message>
+    <message name="RegisterCreditorRsMessage">
+        <part name="payload" element="insis:RegisterCreditorRs"/>
+    </message>
+    <message name="RegisterExpertRqMessage">
+        <part name="payload" element="insis:RegisterExpertRq"/>
+    </message>
+    <message name="RegisterExpertRsMessage">
+        <part name="payload" element="insis:RegisterExpertRs"/>
+    </message>
+    <message name="RegisterNewBankRqMessage">
+        <part name="payload" element="insis:RegisterNewBankRq"/>
+    </message>
+    <message name="RegisterNewBankRsMessage">
+        <part name="payload" element="insis:RegisterNewBankRs"/>
+    </message>
+    <message name="RegisterNewClientRqMessage">
+        <part name="payload" element="insis:RegisterNewClientRq"/>
+    </message>
+    <message name="RegisterNewClientRsMessage">
+        <part name="payload" element="insis:RegisterNewClientRs"/>
+    </message>
+    <message name="RegisterNewEmployeeRsMessage">
+        <part name="payload" element="insis:RegisterNewEmployeeRs"/>
+    </message>
+    <message name="RegisterNewInsurerRqMessage">
+        <part name="payload" element="insis:RegisterNewInsurerRq"/>
+    </message>
+    <message name="RegisterNewInsurerRsMessage">
+        <part name="payload" element="insis:RegisterNewInsurerRs"/>
+    </message>
+    <message name="RegisterNewOfficeRqMessage">
+        <part name="payload" element="insis:RegisterNewOfficeRq"/>
+    </message>
+    <message name="RegisterNewOfficeRsMessage">
+        <part name="payload" element="insis:RegisterNewOfficeRs"/>
+    </message>
+    <message name="RegisterNewOthersRqMessage">
+        <part name="payload" element="insis:RegisterNewOthersRq"/>
+    </message>
+    <message name="RegisterNewOthersRsMessage">
+        <part name="payload" element="insis:RegisterNewOthersRs"/>
+    </message>
+    <message name="RegisterNewPersonRqMessage">
+        <part name="payload" element="insis:RegisterNewPersonRq"/>
+    </message>
+    <message name="RegisterNewPersonRsMessage">
+        <part name="payload" element="insis:RegisterNewPersonRs"/>
+    </message>
+    <message name="RegisterNewPersonRoleRqMessage">
+        <part name="payload" element="insis:RegisterNewPersonRoleRq"/>
+    </message>
+    <message name="RegisterNewPersonRoleRsMessage">
+        <part name="payload" element="insis:RegisterNewPersonRoleRs"/>
+    </message>
+    <message name="RegisterNewStaffRqMessage">
+        <part name="payload" element="insis:RegisterNewStaffRq"/>
+    </message>
+    <message name="RegisterNewStaffRsMessage">
+        <part name="payload" element="insis:RegisterNewStaffRs"/>
+    </message>
+    <message name="RegisterNewSurvivorsRsMessage">
+        <part name="payload" element="insis:RegisterNewSurvivorsRs"/>
+    </message>
+    <message name="RemovePersonRoleRqMessage">
+        <part name="payload" element="insis:RemovePersonRoleRq"/>
+    </message>
+    <message name="RemovePersonRoleRsMessage">
+        <part name="payload" element="insis:RemovePersonRoleRs"/>
+    </message>
+    <message name="RetrieveAgentInfoRqMessage">
+        <part name="payload" element="insis:RetrieveAgentInfoRq"/>
+    </message>
+    <message name="RetrieveAgentInfoRsMessage">
+        <part name="payload" element="insis:RetrieveAgentInfoRs"/>
+    </message>
+    <message name="RetrieveBankInfoRqMessage">
+        <part name="payload" element="insis:RetrieveBankInfoRq"/>
+    </message>
+    <message name="RetrieveBankInfoRsMessage">
+        <part name="payload" element="insis:RetrieveBankInfoRs"/>
+    </message>
+    <message name="RetrieveCreditorInfoRqMessage">
+        <part name="payload" element="insis:RetrieveCreditorInfoRq"/>
+    </message>
+    <message name="RetrieveCreditorInfoRsMessage">
+        <part name="payload" element="insis:RetrieveCreditorInfoRs"/>
+    </message>
+    <message name="RetrieveExpertInfoRqMessage">
+        <part name="payload" element="insis:RetrieveExpertInfoRq"/>
+    </message>
+    <message name="RetrieveExpertInfoRsMessage">
+        <part name="payload" element="insis:RetrieveExpertInfoRs"/>
+    </message>
+    <message name="RetrieveInsurerInfoRqMessage">
+        <part name="payload" element="insis:RetrieveInsurerInfoRq"/>
+    </message>
+    <message name="RetrieveInsurerInfoRsMessage">
+        <part name="payload" element="insis:RetrieveInsurerInfoRs"/>
+    </message>
+    <message name="RetrieveOfficeInfoRqMessage">
+        <part name="payload" element="insis:RetrieveOfficeInfoRq"/>
+    </message>
+    <message name="RetrieveOfficeInfoRsMessage">
+        <part name="payload" element="insis:RetrieveOfficeInfoRs"/>
+    </message>
+    <message name="RetrieveOthersInfoRqMessage">
+        <part name="payload" element="insis:RetrieveOthersInfoRq"/>
+    </message>
+    <message name="RetrieveOthersInfoRsMessage">
+        <part name="payload" element="insis:RetrieveOthersInfoRs"/>
+    </message>
+    <message name="RetrieveStaffInfoRqMessage">
+        <part name="payload" element="insis:RetrieveStaffInfoRq"/>
+    </message>
+    <message name="RetrieveStaffInfoRsMessage">
+        <part name="payload" element="insis:RetrieveStaffInfoRs"/>
+    </message>
+    <portType name="InsisPDMPort">
+        <operation name="changeAgentInfo">
+            <input message="tns:ChangeAgentInfoRqMessage"/>
+            <output message="tns:ChangeAgentInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="changeBankInfo">
+            <input message="tns:ChangeBankInfoRqMessage"/>
+            <output message="tns:ChangeBankInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="changeCreditorInfo">
+            <input message="tns:ChangeCreditorInfoRqMessage"/>
+            <output message="tns:ChangeCreditorInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="changeClientInfo">
+            <input message="tns:ChangeClientInfoRqMessage"/>
+            <output message="tns:ChangeClientInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="changeExpertInfo">
+            <input message="tns:ChangeExpertInfoRqMessage"/>
+            <output message="tns:ChangeExpertInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="changeInsurerInfo">
+            <input message="tns:ChangeInsurerInfoRqMessage"/>
+            <output message="tns:ChangeInsurerInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="changePersonInfo">
+            <input message="tns:ChangePersonInfoRqMessage"/>
+            <output message="tns:ChangePersonInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="changeStaffInfo">
+            <input message="tns:ChangeStaffInfoRqMessage"/>
+            <output message="tns:ChangeStaffInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="changeOfficeInfo">
+            <input message="tns:ChangeOfficeInfoRqMessage"/>
+            <output message="tns:ChangeOfficeInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="changeOthersInfo">
+            <input message="tns:ChangeOfficeInfoRqMessage"/>
+            <output message="tns:ChangeOfficeInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="findPersonByPID">
+            <input message="tns:FindPersonByPIDRqMessage"/>
+            <output message="tns:FindPersonByPIDRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="getPeopleDocuments">
+            <input message="tns:GetPeopleDocumentsRqMessage"/>
+            <output message="tns:GetPeopleDocumentsRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="registerAgent">
+            <input message="tns:RegisterAgentRqMessage"/>
+            <output message="tns:RegisterAgentRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="registerCreditor">
+            <input message="tns:RegisterCreditorRqMessage"/>
+            <output message="tns:RegisterCreditorRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="registerExpert">
+            <input message="tns:RegisterExpertRqMessage"/>
+            <output message="tns:RegisterExpertRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="registerNewBank">
+            <input message="tns:RegisterNewBankRqMessage"/>
+            <output message="tns:RegisterNewBankRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="registerNewClient">
+            <input message="tns:RegisterNewClientRqMessage"/>
+            <output message="tns:RegisterNewClientRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="registerNewInsurer">
+            <input message="tns:RegisterNewInsurerRqMessage"/>
+            <output message="tns:RegisterNewInsurerRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="registerNewOffice">
+            <input message="tns:RegisterNewOfficeRqMessage"/>
+            <output message="tns:RegisterNewOfficeRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="registerNewOthers">
+            <input message="tns:RegisterNewOthersRqMessage"/>
+            <output message="tns:RegisterNewOthersRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="registerNewPerson">
+            <input message="tns:RegisterNewPersonRqMessage"/>
+            <output message="tns:RegisterNewPersonRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="registerNewPersonRole">
+            <input message="tns:RegisterNewPersonRoleRqMessage"/>
+            <output message="tns:RegisterNewPersonRoleRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="registerNewStaff">
+            <input message="tns:RegisterNewStaffRqMessage"/>
+            <output message="tns:RegisterNewStaffRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="removePersonRole">
+            <input message="tns:RemovePersonRoleRqMessage"/>
+            <output message="tns:RemovePersonRoleRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="retrieveAgentInfo">
+            <input message="tns:RetrieveAgentInfoRqMessage"/>
+            <output message="tns:RetrieveAgentInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="retrieveBankInfo">
+            <input message="tns:RetrieveBankInfoRqMessage"/>
+            <output message="tns:RetrieveBankInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="retrieveCreditorInfo">
+            <input message="tns:RetrieveCreditorInfoRqMessage"/>
+            <output message="tns:RetrieveCreditorInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="retrieveExpertInfo">
+            <input message="tns:RetrieveExpertInfoRqMessage"/>
+            <output message="tns:RetrieveExpertInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="retrieveInsurerInfo">
+            <input message="tns:RetrieveInsurerInfoRqMessage"/>
+            <output message="tns:RetrieveInsurerInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="retrieveOfficeInfo">
+            <input message="tns:RetrieveOfficeInfoRqMessage"/>
+            <output message="tns:RetrieveOfficeInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="retrieveOthersInfo">
+            <input message="tns:RetrieveOthersInfoRqMessage"/>
+            <output message="tns:RetrieveOthersInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+        <operation name="retrieveStaffInfo">
+            <input message="tns:RetrieveStaffInfoRqMessage"/>
+            <output message="tns:RetrieveStaffInfoRsMessage"/>
+            <fault name="Error" message="ibase:ErrorMessage"/>
+        </operation>
+    </portType>
+    <binding name="InsisPDMPortBinding" type="tns:InsisPDMPort">
+        <wsp:PolicyReference URI="#policy-kerberos-or-unt"/>
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="changeAgentInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="changeBankInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="changeCreditorInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="changeClientInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="changeExpertInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="changeInsurerInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="changePersonInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="changeStaffInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="changeOfficeInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="changeOthersInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="findPersonByPID">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="getPeopleDocuments">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="registerAgent">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="registerCreditor">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="registerExpert">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="registerNewBank">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="registerNewClient">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="registerNewInsurer">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="registerNewOffice">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="registerNewOthers">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="registerNewPerson">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="registerNewPersonRole">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="registerNewStaff">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="removePersonRole">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="retrieveAgentInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="retrieveBankInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="retrieveCreditorInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="retrieveExpertInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="retrieveInsurerInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="retrieveOfficeInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="retrieveOthersInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+        <operation name="retrieveStaffInfo">
+            <soap:operation style="document" soapAction="process"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+            <fault name="Error">
+                <soap:fault use="literal" name="Error"/>
+            </fault>
+        </operation>
+    </binding>
+    <service name="InsisPDM">
+        <port name="InsisPDMPort" binding="tns:InsisPDMPortBinding">
+            <soap:address location="http://10.1.4.201:9179/insisws/InsisPDMPort"/>
+        </port>
+    </service>
+</definitions>
