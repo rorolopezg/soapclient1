@@ -20,6 +20,7 @@ import javax.xml.ws.handler.MessageContext;
 import javax.xml.ws.handler.PortInfo;
 import javax.xml.ws.handler.soap.SOAPHandler;
 import javax.xml.ws.handler.soap.SOAPMessageContext;
+import java.math.BigInteger;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -75,8 +76,10 @@ public class Soapclient1Application {
 
 			FndPersonByPIDRqType payload = new FndPersonByPIDRqType();
 			payload.setPID("RUT6000001283");
+			payload.setEntityType(BigInteger.valueOf(2));
+
 			FndPersonByPIDRsType policyByNumber =insisPDMPort.findPersonByPID(payload);
-			System.out.println(policyByNumber.getEntity().getPersonalData().getName());
+			System.out.println(policyByNumber.getEntity().getCompanyData().getName());
 		};
 	}
 
@@ -102,10 +105,10 @@ public class Soapclient1Application {
 					String prefix = "wsse";
 					String uri = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd";
 					SOAPElement securityElem = factory.createElement("Security",prefix,uri);
-					SOAPElement usernameToken = factory.createElement("UsernameToken");
-					SOAPElement username = factory.createElement("Username");
+					SOAPElement usernameToken = factory.createElement("UsernameToken", prefix, uri);
+					SOAPElement username = factory.createElement("Username", prefix, uri);
 					username.addTextNode("insis_gen_v10");
-					SOAPElement password = factory.createElement("Password");
+					SOAPElement password = factory.createElement("Password", prefix, uri);
 					password.addTextNode("Uy-Dev2022");
 
 					usernameToken.addChildElement(username);
